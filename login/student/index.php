@@ -74,7 +74,7 @@
 					<h2 class="block fw-bold">Merdeka Belajar Kampus Merdeka</h2>
 					<p>Sistem Informasi khususnya di Universitas Pembangunan Jaya telah berusaha terus bersinergi dalam mempersiapkan lulusan yang siap terjun di dalam dunia kerja, khususnya di bidang Sistem Informasi.</p>
 					<p>Untuk itu Program Merdeka Belajar yang merupakan bagian dari kebijakan Merdeka Belajar oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia yang memberikan kesempaatan bagi mahasiswa/i untuk mengasah kemampuan sesuai bakat dan minat dengan terjun langsung ke dunia kerja sebagai persiapan karier masa depan.</p>
-					<a class="btn btn-outline-primary" href="./pendaftaran/registrasi.php"><i class="far fa-paper-plane"></i> Daftarkan Dirimu</a>
+					<a class="btn btn-outline-primary" href="../pendaftaran/registrasi.php"><i class="far fa-paper-plane"></i> Daftarkan Dirimu</a>
 					<a class="btn btn-dark button-home" href="#program-mbkm"><i class="far fa-clone"></i> Telusuri lebih lanjut</a>
 				</div>
 			</div>
@@ -98,7 +98,7 @@
 					<div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
 						<div class="program-mbkm-item-caption-content text-center text-white">Pertukaran Pelajar</div>
 					</div>
-					<img class="img-fluid" src="./img/gambar mbkm-01.png " alt="..." />
+					<img class="img-fluid" src="../img/gambar mbkm-01.png " alt="..." />
 					</div>
 				</div>
 				<!-- program-mbkm Item 2-->
@@ -107,7 +107,7 @@
 					<div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
 						<div class="program-mbkm-item-caption-content text-center text-white">Asisten Pengajar</div>
 					</div>
-					<img class="img-fluid" src="./img/gambar mbkm-02.png" alt="..." />
+					<img class="img-fluid" src="../img/gambar mbkm-02.png" alt="..." />
 					</div>
 				</div>
 				<!-- program-mbkm Item 3-->
@@ -116,7 +116,7 @@
 					<div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
 						<div class="program-mbkm-item-caption-content text-center text-white">Studi Independen</div>
 					</div>
-					<img class="img-fluid" src="./img/gambar mbkm-03.png" alt="..." />
+					<img class="img-fluid" src="../img/gambar mbkm-03.png" alt="..." />
 					</div>
 				</div>
 				<!-- program-mbkm Item 4-->
@@ -125,7 +125,7 @@
 					<div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
 						<div class="program-mbkm-item-caption-content text-center text-white">Magang</div>
 					</div>
-					<img class="img-fluid" src="./img/gambar mbkm-04.png" alt="..." />
+					<img class="img-fluid" src="../img/gambar mbkm-04.png" alt="..." />
 					</div>
 				</div>
 				<!-- program-mbkm Item 5-->
@@ -134,7 +134,7 @@
 					<div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
 						<div class="program-mbkm-item-caption-content text-center text-white">Riset / Penelitian</div>
 					</div>
-					<img class="img-fluid" src="./img/gambar mbkm-05.png" alt="..." />
+					<img class="img-fluid" src="../img/gambar mbkm-05.png" alt="..." />
 					</div>
 				</div>
 				<!-- program-mbkm Item 6-->
@@ -143,7 +143,7 @@
 					<div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
 						<div class="program-mbkm-item-caption-content text-center text-white">Membangun Desa / KKN </div>
 					</div>
-					<img class="img-fluid" src="./img/gambar mbkm-06.png" alt="..." />
+					<img class="img-fluid" src="../img/gambar mbkm-06.png" alt="..." />
 					</div>
 				</div>
 				<!-- program-mbkm Item 7-->
@@ -152,7 +152,7 @@
 					<div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
 						<div class="program-mbkm-item-caption-content text-center text-white">Proyek Kemanusiaan</div>
 					</div>
-					<img class="img-fluid" src="./img/gambar mbkm-07.png" alt="..." />
+					<img class="img-fluid" src="../img/gambar mbkm-07.png" alt="..." />
 					</div>
 				</div>
 				<!-- program-mbkm Item 8-->
@@ -161,7 +161,7 @@
 					<div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
 						<div class="program-mbkm-item-caption-content text-center text-white">Kegiatan Wirausaha</div>
 					</div>
-					<img class="img-fluid" src="./img/gambar mbkm-08.png" alt="..." />
+					<img class="img-fluid" src="../img/gambar mbkm-08.png" alt="..." />
 					</div>
 				</div>
 				<!--End Portofolio-->
