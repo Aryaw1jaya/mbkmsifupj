@@ -9,6 +9,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
   <link rel="stylesheet" href="registrasi.css" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    @media (min-width: 500px) {
+      form {
+        width: 75%;
+      }
+    }
+
+    @media (max-width: 992px) {
+      form {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body class="pt-5">

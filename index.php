@@ -167,7 +167,9 @@
   </section>
   <!-- End of Testimoni -->
 
+  <!-- Start of footer -->
   <?php include('partials/footer.php'); ?>
+  <!-- End of footer -->
 
   <!-- program-mbkm Modal1-->
   <div class="program-mbkm-modal modal fade" id="program-mbkmModal1" tabindex="-1" aria-labelledby="program-mbkmModal1" aria-hidden="true">
