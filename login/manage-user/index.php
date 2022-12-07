@@ -101,19 +101,20 @@
             </tr>
             <?php
             while ($user_data = mysqli_fetch_array($result)) {
-                echo "<tr>";
-                echo "<td>" . $user_data['nama'] . "</td>";
-                echo "<td>" . $user_data['username'] . "</td>";
-                echo "<td>" . $user_data['password'] . "</td>";
-                echo "<td>" . $user_data['level'] . "</td>";
-                echo "<td>  <a href='edit.php?username=$user_data[username]'>
+                echo "<tr>
+                        <td>" . $user_data['nama'] . "</td>
+                        <td>" . $user_data['username'] . "</td>
+                        <td>" . $user_data['password'] . "</td>
+                        <td>" . $user_data['level'] . "</td>
+                        <td>  
+                            <a href='edit.php?username=$user_data[username]'>
                                 <button type='button' class='btn btn-warning shadow'>Edit</button>
                             </a>
                             <a href='delete.php?username=$user_data[username]'>
                                 <button type='button' class='btn btn-danger shadow'>Delete</button>
                             </a>
-                    </td>";
-                echo "</tr>";
+                        </td>
+                    </tr>";
             }
             ?>
         </table>
