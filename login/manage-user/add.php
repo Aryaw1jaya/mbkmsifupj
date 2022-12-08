@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin | Add Users</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
+    <link rel="stylesheet" href="../style/style.css" />
 </head>
 
 <body>
-    <div class="container float-start">
-        <a href="index.php">
-            <button type="button" class="btn btn-warning fw-bold fs-6 py-1">
-                < Back</button>
-        </a>
-    </div>
-    <div class="container mt-4 w-75">
-        <h3 class="fw-bolder text-center mb-3">Add New User</h3>
+    <a href="index.php" class="btn btn-warning mt-3 ms-3"><i class="fas fa-arrow-left"></i> Back</a>
+    <br /><br />
+    <div class="container m-auto px-5 py-4 bg-body rounded-5 my-1 shadow-lg mb-5">
+        <div class="divider-custom mb-4">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Add New User</h2>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
         <form action="add.php" method="post" name="form1">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label fw-semibold">Username</label>

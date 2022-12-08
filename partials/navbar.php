@@ -14,19 +14,19 @@
                 <a class="nav-link" href="index.php"><i class="fas fa-tachometer-alt"></i>Beranda</a>
             </li>
             <li id="itemActive" class="nav-item">
-                <a class="nav-link" href="index.php#program-mbkm"><i class="far fa-clone"></i>Program MBKM</a>
-            </li>
-            <li id="itemActive" class="nav-item">
-                <a class="nav-link" href="index.php#testimoni"><i class="far fa-address-card"></i>Testimoni</a>
+                <a class="nav-link" href="manfaat.php"><i class="fas fa-plus"></i>Manfaat</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="registrasi.php"><i class="far fa-address-book"></i>Pendaftaran</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://www.sif.upj.ac.id/"><i class="fa fa-search"></i>Tentang Sif UPJ</a>
+            <li id="itemActive" class="nav-item">
+                <a class="nav-link" href="faq.php"><i class="fas fa-comment"></i>FAQ</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./login/"><i class="far fa-user"></i>Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.sif.upj.ac.id/"><i class="fa fa-search"></i>Tentang Sif UPJ</a>
             </li>
         </ul>
     </div>

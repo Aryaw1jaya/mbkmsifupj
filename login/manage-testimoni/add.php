@@ -66,47 +66,20 @@
     }
     ?>
 
-    <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container">
-            <a class="navbar-brand text-light" href="#">MBKM SIF UPJ</a>
-            <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon text-light"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ">
-                    <li class="nav-item ">
-                        <a class="nav-link active text-light" aria-current="page" href="../student/index.php">Home</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link text-light" href="registrasi.php">Pendaftaran MBKM</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light float-end" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Account
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!-- <li><a class="dropdown-item " href="#">Action</a></li> -->
-                            <li><a class="dropdown-item " href="#">Change Password</a></li>
-                            <li><a class="dropdown-item " href="../logout.php">Log Out</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include("../partials/navbar.php"); ?>
 
-    <a href="index.php" class="btn btn-primary mt-3 ms-3"><i class="fas fa-arrow-left"></i> Kembali</a>
+    <a href="index.php" class="btn btn-warning mt-3 ms-3"><i class="fas fa-arrow-left"></i> Back</a>
 
-    <!-- Start Card Registrasi -->
+    <!-- Start Card Testimoni -->
     <div class="container m-auto px-5 py-5 bg-body rounded-5 my-5 shadow-lg">
         <div class="divider-custom mb-5">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon">
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Form Pendaftaran</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Form Add Testimoni</h2>
             </div>
             <div class="divider-custom-line"></div>
         </div>
-        <!-- Form Registrasi -->
+        <!-- Form Testimoni -->
         <form class="mx-auto" action="add.php" method="post" enctype="multipart/form-data">
             <!-- <div class="alert alert-success" role="alert">
           Form Terkirim !!!
@@ -114,7 +87,7 @@
             <!-- 2 column grid layout with text inputs for the first and last names -->
             <div class="row mb-2">
                 <div class="col">
-                    <div class="form-outline">
+                    <div class="form-outline mb-2">
                         <label class="form-label" for="form6Example1">Nama Lengkap</label>
                         <input type="text" id="form6Example1" class="form-control shadow-sm" name="nama" required />
                     </div>
@@ -142,12 +115,12 @@
 
                 <!-- Submit button -->
                 <button type="submit" name="Submit" class="btn btn-primary btn-block mb-1 w-100 shadow-lg">
-                    Mendaftar
+                    Add Testimoni
                 </button>
         </form>
-        <!-- End form registrasi -->
+        <!-- End form Testimoni -->
     </div>
-    <!-- End Card Registrasi -->
+    <!-- End Card Testimoni -->
 
 </body>
 
