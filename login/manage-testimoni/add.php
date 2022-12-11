@@ -19,7 +19,7 @@
     // cek apakah yang mengakses halaman ini sudah login
     if ($_SESSION['level'] == "") {
         header("location:../index.php"); // kalau belum login, kembalikan ke halaman login (belum benar)
-    } else if ($_SESSION['level'] != "lecturer") {
+    } else if ($_SESSION['level'] == "student") {
         echo "<script>alert('Anda Bukan Dosen. Silahkan login lagi!');</script>";
         header("location:../index.php");
     }

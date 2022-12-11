@@ -84,7 +84,7 @@
     include("../koneksi.php");
 
     // Insert user data into table
-    $result = mysqli_query($koneksi, "INSERT INTO registrasi(nama, nim, program, semester, no_hp, email, alamat, surat_rekomendasi, sptjm, status) VALUES('$nama','$nim','$program', '$semester', '$no_hp', '$email', '$alamat', ' $file_surat_rekomendasi->name', '$file_sptjm->name', 'Belum Diverifikasi')");
+    $result = mysqli_query($koneksi, "INSERT INTO registrasi(nama, nim, program, semester, no_hp, email, alamat, surat_rekomendasi, sptjm, status) VALUES('$nama','$nim','$program', '$semester', '$no_hp', '$email', '$alamat', '$file_surat_rekomendasi->name', '$file_sptjm->name', 'Belum Diverifikasi')");
 
     // Show message when user added
     echo "<script>alert('Pendaftaran Anda Berhasil');</script>";
@@ -120,7 +120,7 @@
         <div class="col">
           <div class="form-outline">
             <label class="form-label" for="form6Example2">NIM</label>
-            <input type="number" disabled id="form6Example2" class="form-control shadow-sm" name="nim" value="<?php echo $_SESSION['username']; ?>" />
+            <input type="number" readonly id="form6Example2" class="form-control shadow-sm" name="nim" value="<?php echo $_SESSION['username']; ?>" />
           </div>
         </div>
       </div>

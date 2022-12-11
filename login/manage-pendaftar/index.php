@@ -86,14 +86,17 @@
                 echo "<td><a href='../document/" . $user_data['sptjm'] . "'><button type='button' class='btn btn-info shadow'>" . $user_data['sptjm'] . "</button></a> </td>";
                 echo "<td>" . $user_data['status'] . "</td>";
                 echo "<td>
-                        <a href='edit.php?id_pendaftaran=$user_data[id_pendaftaran]'>
-                            <button type='button' class='btn btn-warning shadow'>Edit</button>
+                        <a href='verifikasi.php?id_pendaftaran=$user_data[id_pendaftaran]'>
+                            <button type='button' class='btn btn-success shadow w-75'><i class='fas fa-check'></i></button>
+                        </a>
+                        <a href='denied.php?id_pendaftaran=$user_data[id_pendaftaran]'>
+                            <button type='button' class='btn btn-warning shadow w-75'><i class='fas fa-ban'></i></button>
                         </a>
                         <a href='delete.php?id_pendaftaran=$user_data[id_pendaftaran]'>
-                            <button type='button' class='btn btn-danger shadow'>Delete</button>
+                            <button type='button' class='btn btn-danger shadow w-75'><i class='fas fa-trash'></i></button>
                         </a>
-                    </td>";
-                echo "</tr>";
+                    </td>
+                    </tr>";
             }
             ?>
         </table>
