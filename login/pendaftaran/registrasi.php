@@ -24,6 +24,11 @@
     header("location:../index.php");
   }
 
+  // include database connection file
+  include("../koneksi.php");
+
+  // $status = mysqli_query($koneksi, "SELECT * FROM registrasi WHERE nim = '$_SESSION[username]'");
+
   ?>
 
   <?php
@@ -80,12 +85,8 @@
     //   echo "<br>";
     // }
 
-    // include database connection file
-    include("../koneksi.php");
-
     // Insert user data into table
     $result = mysqli_query($koneksi, "INSERT INTO registrasi(nama, nim, program, semester, no_hp, email, alamat, surat_rekomendasi, sptjm, status) VALUES('$nama','$nim','$program', '$semester', '$no_hp', '$email', '$alamat', '$file_surat_rekomendasi->name', '$file_sptjm->name', 'Belum Diverifikasi')");
-
     // Show message when user added
     echo "<script>alert('Pendaftaran Anda Berhasil');</script>";
   }

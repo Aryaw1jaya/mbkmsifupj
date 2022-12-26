@@ -21,6 +21,13 @@
 		echo "<script>alert('Anda Bukan Dosen. Silahkan login lagi!');</script>";
 		header("location:../index.php");
 	}
+
+	// Create database connection using config file
+	include_once("../koneksi.php");
+
+	// Fetch all users data from database
+	$result = mysqli_query($koneksi, "SELECT * FROM user WHERE username = '$_SESSION[username]'");
+	$user_data = mysqli_fetch_array($result);
 	?>
 
 	<!-- Navbar -->
@@ -30,8 +37,68 @@
 	<div class="container mt-3">
 		<h1>Halaman Dosen</h1>
 
-		<p>Halo <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
+		<p>Halo <b><?php echo $user_data['nama'] ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
 	</div>
+
+	<div class="w-75 mx-auto">
+		<canvas id="myChart"></canvas>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<script>
+		var ctx = document.getElementById("myChart").getContext('2d');
+		var myChart = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: ["Pendaftar", "Verifikasi", "Pending", "Ditolak"],
+				datasets: [{
+					label: "",
+					data: [
+						<?php
+						$jumlah = mysqli_query($koneksi, "select * from registrasi");
+						echo mysqli_num_rows($jumlah);
+						?>,
+						<?php
+						$jumlah_verif = mysqli_query($koneksi, "select * from registrasi where status='Terverifikasi'");
+						echo mysqli_num_rows($jumlah_verif);
+						?>,
+						<?php
+						$jumlah_pending = mysqli_query($koneksi, "select * from registrasi where status='Belum Diverifikasi'");
+						echo mysqli_num_rows($jumlah_pending);
+						?>,
+						<?php
+						$jumlah_tolak = mysqli_query($koneksi, "select * from registrasi where status='diTolak'");
+						echo mysqli_num_rows($jumlah_tolak);
+						?>
+
+					],
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)'
+					],
+					borderColor: [
+						'rgba(255,99,132,1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)'
+					],
+					borderWidth: 1
+				}]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						}
+					}]
+				}
+			}
+		});
+	</script>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>

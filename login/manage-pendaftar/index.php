@@ -82,18 +82,18 @@
                         </a>
                     </td>";
                 echo "<td>" . $user_data['alamat'] . "</td>";
-                echo "<td><a href='../document/" . $user_data['surat_rekomendasi'] . "'><button type='button' class='btn btn-info shadow'>" . $user_data['surat_rekomendasi'] . "</button></a> </td>";
-                echo "<td><a href='../document/" . $user_data['sptjm'] . "'><button type='button' class='btn btn-info shadow'>" . $user_data['sptjm'] . "</button></a> </td>";
+                echo "<td><a href='../document/" . $user_data['surat_rekomendasi'] . "'><button type='button' class='btn btn-info shadow'><i class='fas fa-eye'></i> Lihat</button></a> </td>";
+                echo "<td><a href='../document/" . $user_data['sptjm'] . "'><button type='button' class='btn btn-info shadow'><i class='fas fa-eye'></i> Lihat</button></a> </td>";
                 echo "<td>" . $user_data['status'] . "</td>";
                 echo "<td>
                         <a href='verifikasi.php?id_pendaftaran=$user_data[id_pendaftaran]'>
-                            <button type='button' class='btn btn-success shadow w-75'><i class='fas fa-check'></i></button>
+                            <button type='button' class='btn btn-success shadow w-75'><i class='fas fa-check'></i> Verifikasi</button>
                         </a>
                         <a href='denied.php?id_pendaftaran=$user_data[id_pendaftaran]'>
-                            <button type='button' class='btn btn-warning shadow w-75'><i class='fas fa-ban'></i></button>
+                            <button type='button' class='btn btn-warning shadow w-75'><i class='fas fa-ban'></i> Tolak</button>
                         </a>
                         <a href='delete.php?id_pendaftaran=$user_data[id_pendaftaran]'>
-                            <button type='button' class='btn btn-danger shadow w-75'><i class='fas fa-trash'></i></button>
+                            <button type='button' class='btn btn-danger shadow w-75'><i class='fas fa-trash'></i> Hapus</button>
                         </a>
                     </td>
                     </tr>";

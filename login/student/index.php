@@ -22,6 +22,12 @@
 		header("location:../index.php");
 	}
 
+	// Create database connection using config file
+	include_once("../koneksi.php");
+
+	// Fetch all users data from database
+	$result = mysqli_query($koneksi, "SELECT * FROM user WHERE username = '$_SESSION[username]'");
+	$user_data = mysqli_fetch_array($result);
 	?>
 	<!-- Navbar -->
 	<?php include '../partials/navbar.php'; ?>
@@ -32,7 +38,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h1>Halaman Mahasiswa</h1>
-				<p>Selamat Datang <b><?php echo $_SESSION['username']; ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
+				<p>Selamat Datang <b><?php echo $user_data['nama'] ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
 			</div>
 		</div>
 	</div>

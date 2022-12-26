@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 24, 2022 at 06:16 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.0.19
+-- Generation Time: Dec 16, 2022 at 05:40 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,6 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Stand-in structure for view `all_registrasi`
+-- (See below for the actual view)
+--
+CREATE TABLE `all_registrasi` (
+`id_pendaftaran` int(11)
+,`nama` varchar(40)
+,`nim` varchar(20)
+,`program` varchar(30)
+,`semester` varchar(5)
+,`no_hp` varchar(15)
+,`email` varchar(40)
+,`alamat` text
+,`surat_rekomendasi` text
+,`sptjm` text
+,`status` varchar(20)
+);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `home`
 --
 
@@ -31,7 +51,7 @@ CREATE TABLE `home` (
   `id_home` int(11) NOT NULL,
   `title` varchar(40) NOT NULL,
   `hero_section` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -44,7 +64,7 @@ CREATE TABLE `program` (
   `nama_program` varchar(40) NOT NULL,
   `images` varchar(50) NOT NULL,
   `deskripsi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -64,7 +84,14 @@ CREATE TABLE `registrasi` (
   `surat_rekomendasi` text NOT NULL,
   `sptjm` text NOT NULL,
   `status` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `registrasi`
+--
+
+INSERT INTO `registrasi` (`id_pendaftaran`, `nama`, `nim`, `program`, `semester`, `no_hp`, `email`, `alamat`, `surat_rekomendasi`, `sptjm`, `status`) VALUES
+(27, 'Arya Wijaya', '2020081017', 'Magang', '6', '081215327714', 'arya.wijaya@student.upj.ac.id', 'Gg. Masjid nurussalam RT 08/05 No.69', 'SR_AryaWijaya_2020081017.pdf', 'SPTJM_AryaWijaya_2020081017.pdf', 'Terverifikasi');
 
 -- --------------------------------------------------------
 
@@ -75,9 +102,18 @@ CREATE TABLE `registrasi` (
 CREATE TABLE `testimoni` (
   `id` int(11) NOT NULL,
   `nama` varchar(40) NOT NULL,
+  `foto` text NOT NULL,
   `prodi_angkatan` varchar(20) NOT NULL,
   `testimoni` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `testimoni`
+--
+
+INSERT INTO `testimoni` (`id`, `nama`, `foto`, `prodi_angkatan`, `testimoni`) VALUES
+(7, 'Arya', 'arya.JPG', 'Sif_2020', 'Pada semester 3 saya mengikuti program MBKM yaitu Studi x Agate Academy, yang mempelajari tentang pengembangan Games dan Industrinya. Saya mendapatkan ilmu tentang menjadi Project Manager dan Games Programmer, serta situasi aslinya seperti di Industri.'),
+(8, 'Richard', 'richard.jpg', 'Sif_2020', 'Saya ikut program MBKM pertukaran pelajar di USNI, senang bisa mendapatkan pengalaman baru bisa belajar di luar kampus, selain itu juga benefit nya bisa konversi SKS dan JSDP.');
 
 -- --------------------------------------------------------
 
@@ -90,16 +126,55 @@ CREATE TABLE `user` (
   `password` varchar(20) NOT NULL,
   `nama` varchar(40) NOT NULL,
   `level` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`username`, `password`, `nama`, `level`) VALUES
+('2020081017', 'upj.2020081017', 'Arya Wijaya', 'student'),
 ('admin', 'admin', 'admin', 'admin'),
 ('lecturer', 'lecturer', 'lecturer', 'lecturer'),
 ('student', 'student', 'student', 'student');
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `verif_registrasi`
+-- (See below for the actual view)
+--
+CREATE TABLE `verif_registrasi` (
+`id_pendaftaran` int(11)
+,`nama` varchar(40)
+,`nim` varchar(20)
+,`program` varchar(30)
+,`semester` varchar(5)
+,`no_hp` varchar(15)
+,`email` varchar(40)
+,`alamat` text
+,`surat_rekomendasi` text
+,`sptjm` text
+,`status` varchar(20)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `all_registrasi`
+--
+DROP TABLE IF EXISTS `all_registrasi`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `all_registrasi`  AS SELECT `registrasi`.`id_pendaftaran` AS `id_pendaftaran`, `registrasi`.`nama` AS `nama`, `registrasi`.`nim` AS `nim`, `registrasi`.`program` AS `program`, `registrasi`.`semester` AS `semester`, `registrasi`.`no_hp` AS `no_hp`, `registrasi`.`email` AS `email`, `registrasi`.`alamat` AS `alamat`, `registrasi`.`surat_rekomendasi` AS `surat_rekomendasi`, `registrasi`.`sptjm` AS `sptjm`, `registrasi`.`status` AS `status` FROM `registrasi``registrasi`  ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `verif_registrasi`
+--
+DROP TABLE IF EXISTS `verif_registrasi`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `verif_registrasi`  AS SELECT `registrasi`.`id_pendaftaran` AS `id_pendaftaran`, `registrasi`.`nama` AS `nama`, `registrasi`.`nim` AS `nim`, `registrasi`.`program` AS `program`, `registrasi`.`semester` AS `semester`, `registrasi`.`no_hp` AS `no_hp`, `registrasi`.`email` AS `email`, `registrasi`.`alamat` AS `alamat`, `registrasi`.`surat_rekomendasi` AS `surat_rekomendasi`, `registrasi`.`sptjm` AS `sptjm`, `registrasi`.`status` AS `status` FROM `registrasi` WHERE `registrasi`.`status` = 'terverifikasi''terverifikasi'  ;
 
 --
 -- Indexes for dumped tables
@@ -155,13 +230,13 @@ ALTER TABLE `program`
 -- AUTO_INCREMENT for table `registrasi`
 --
 ALTER TABLE `registrasi`
-  MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
 
 --
 -- AUTO_INCREMENT for table `testimoni`
 --
 ALTER TABLE `testimoni`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
