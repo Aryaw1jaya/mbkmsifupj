@@ -100,7 +100,7 @@
                 <div class="col">
                     <div class="form-outline">
                         <label class="form-label" for="form6Example1">Deskripsi</label>
-                        <input type="text" id="form6Example1" class="form-control shadow-sm" name="deskripsi" />
+                        <textarea type="text" id="form6Example1" class="form-control shadow-sm" name="deskripsi"></textarea>
                     </div>
                 </div>
             </div>
