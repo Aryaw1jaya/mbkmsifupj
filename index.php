@@ -47,78 +47,25 @@
       </div>
       <!-- program-mbkm Grid Items-->
       <div class="row justify-content-center">
-        <!-- program-mbkm Item 1-->
+        <?php
+        // Create database connection using config file
+        include_once("./login/koneksi.php");
+        // Fetch all users data from database
+        $result = mysqli_query($koneksi, "SELECT * FROM program ORDER BY id ASC");
+        ?>
+        <?php
+        while ($testi_data = mysqli_fetch_array($result)) {
+          echo '
         <div class="col-md-6 col-lg-3 mb-3">
-          <div class="program-mbkm-item mx-auto" data-bs-toggle="modal" data-bs-target="#program-mbkmModal1">
-            <div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="program-mbkm-item-caption-content text-center text-white">Pertukaran Pelajar</div>
-            </div>
-            <img class="img-fluid" src="login/img/gambar mbkm-01.png" alt="Image MBKM" />
+        <div class="program-mbkm-item mx-auto" data-bs-toggle="modal" data-bs-target="#program-mbkmModal' . $testi_data['id'] . '">
+          <div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="program-mbkm-item-caption-content text-center text-white">' . $testi_data['nama_program'] . '</div>
           </div>
+          <img class="img-fluid" src="./login/img/program/' . $testi_data['images'] . '" alt="images program">
         </div>
-        <!-- program-mbkm Item 2-->
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="program-mbkm-item mx-auto" data-bs-toggle="modal" data-bs-target="#program-mbkmModal2">
-            <div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="program-mbkm-item-caption-content text-center text-white">Asisten Pengajar / Kampus mengajar</div>
-            </div>
-            <img class="img-fluid" src="login/img/gambar mbkm-02.png" alt="Image MBKM" />
-          </div>
-        </div>
-        <!-- program-mbkm Item 3-->
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="program-mbkm-item mx-auto" data-bs-toggle="modal" data-bs-target="#program-mbkmModal3">
-            <div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="program-mbkm-item-caption-content text-center text-white">Studi Independen</div>
-            </div>
-            <img class="img-fluid" src="login/img/gambar mbkm-03.png" alt="Image MBKM" />
-          </div>
-        </div>
-        <!-- program-mbkm Item 4-->
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="program-mbkm-item mx-auto" data-bs-toggle="modal" data-bs-target="#program-mbkmModal4">
-            <div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="program-mbkm-item-caption-content text-center text-white">Magang</div>
-            </div>
-            <img class="img-fluid" src="login/img/gambar mbkm-04.png" alt="Image MBKM" />
-          </div>
-        </div>
-        <!-- program-mbkm Item 5-->
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="program-mbkm-item mx-auto" data-bs-toggle="modal" data-bs-target="#program-mbkmModal5">
-            <div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="program-mbkm-item-caption-content text-center text-white">Riset / Penelitian</div>
-            </div>
-            <img class="img-fluid" src="login/img/gambar mbkm-05.png" alt="Image MBKM" />
-          </div>
-        </div>
-        <!-- program-mbkm Item 6-->
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="program-mbkm-item mx-auto" data-bs-toggle="modal" data-bs-target="#program-mbkmModal6">
-            <div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="program-mbkm-item-caption-content text-center text-white">Membangun Desa / KKN </div>
-            </div>
-            <img class="img-fluid" src="login/img/gambar mbkm-06.png" alt="Image MBKM" />
-          </div>
-        </div>
-        <!-- program-mbkm Item 7-->
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="program-mbkm-item mx-auto" data-bs-toggle="modal" data-bs-target="#program-mbkmModal7">
-            <div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="program-mbkm-item-caption-content text-center text-white">Proyek Kemanusiaan</div>
-            </div>
-            <img class="img-fluid" src="login/img/gambar mbkm-07.png" alt="Image MBKM" />
-          </div>
-        </div>
-        <!-- program-mbkm Item 8-->
-        <div class="col-md-6 col-lg-3 mb-3">
-          <div class="program-mbkm-item mx-auto" data-bs-toggle="modal" data-bs-target="#program-mbkmModal8">
-            <div class="program-mbkm-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="program-mbkm-item-caption-content text-center text-white">Kegiatan Wirausaha</div>
-            </div>
-            <img class="img-fluid" src="login/img/gambar mbkm-08.png" alt="Image MBKM" />
-          </div>
-        </div>
+      </div>';
+        }
+        ?>
         <!--End Portofolio-->
       </div>
     </div>
@@ -171,265 +118,46 @@
   <?php include('partials/footer.php'); ?>
   <!-- End of footer -->
 
-  <!-- program-mbkm Modal1-->
-  <div class="program-mbkm-modal modal fade" id="program-mbkmModal1" tabindex="-1" aria-labelledby="program-mbkmModal1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- program-mbkm Modal - Title-->
-                <h2 class="program-mbkm-modal-title text-secondary text-uppercase mb-0">Pertukaran Pelajar</h2>
-                <br>
-                <!-- program-mbkm Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="login/img/gambar mbkm-01.png" alt="Image MBKM" />
-                <!-- program-mbkm Modal - Text-->
-                <p class="mb-4">
-                  Pertukaran Mahasiswa Merdeka adalah Program Kampus Merdeka yang bertujuan membimbing mahasiswa untuk Mengeksplor & mempelajari keberagaman budaya nusantara, Berteman dengan mahasiswa dari berbagai daerah, dan Kesempatan belajar di kampus lain di Indonesia </p>
-                <a href="registrasi.php" style="color: white">
-                  <button class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    Daftar Program
-                  </button>
-                </a>
+  <?php
+  // Create database connection using config file
+  include_once("./login/koneksi.php");
+  // Fetch all users data from database
+  $result = mysqli_query($koneksi, "SELECT * FROM program ORDER BY id ASC");
+  ?>
+  <?php
+  while ($testi_data = mysqli_fetch_array($result)) {
+    echo '
+      <div class="program-mbkm-modal modal fade" id="program-mbkmModal' . $testi_data['id'] . '" tabindex="-1" aria-labelledby="program-mbkmModal' . $testi_data['id'] . '" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+            <div class="modal-body text-center pb-5">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <!-- program-mbkm Modal - Title-->
+                    <h2 class="program-mbkm-modal-title text-secondary text-uppercase mb-0">' . $testi_data['nama_program'] . '</h2>
+                    <br>
+                    <!-- program-mbkm Modal - Image-->
+                    <img class="img-fluid rounded mb-5" src="./login/img/program/' . $testi_data['images'] . '" alt="images program"/>
+                    <!-- program-mbkm Modal - Text-->
+                    <p class="mb-4">
+                    ' . $testi_data['deskripsi'] . '</p>
+                    <a href="registrasi.php" style="color: white">
+                      <button class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Daftar Program
+                      </button>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <!-- End program-mbkm Modal1-->
-
-  <!-- program-mbkm Modal2-->
-  <div class="program-mbkm-modal modal fade" id="program-mbkmModal2" tabindex="-1" aria-labelledby="program-mbkmModal2" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- program-mbkm Modal - Title-->
-                <h2 class="program-mbkm-modal-title text-secondary text-uppercase mb-0">Asisten Pengajar / Kampus mengajar</h2>
-                <br>
-                <!-- program-mbkm Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="login/img/gambar mbkm-02.png" alt="Image MBKM" />
-                <!-- program-mbkm Modal - Text-->
-                <p class="mb-4">
-                  Kampus Mengajar adalah sebuah program yang memberikan kesempatan kepada mahasiswa untuk belajar di luar kelas selama 1 (satu) semester dengan menjadi mitra guru untuk berinovasi dalam pengembangan strategi dan model pembelajaran yang kreatif dan inovatif di satuan pendidikan sasaran, dengan fokus pada peningkatan kemampuan literasi dan numerasi siswa di sekolah sasaran.
-                </p>
-                <a href="registrasi.php" style="color: white">
-                  <button class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    Daftar Program
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End program-mbkm Modal2-->
-
-  <!-- program-mbkm Modal3-->
-  <div class="program-mbkm-modal modal fade" id="program-mbkmModal3" tabindex="-1" aria-labelledby="program-mbkmModal3" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- program-mbkm Modal - Title-->
-                <h2 class="program-mbkm-modal-title text-secondary text-uppercase mb-0">Studi Independen</h2>
-                <br>
-                <!-- program-mbkm Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="login/img/gambar mbkm-03.png" alt="Image MBKM" />
-                <!-- program-mbkm Modal - Text-->
-                <p class="mb-4">
-                  Studi Independen Bersertifikat adalah bagian dari program Kampus Merdeka yang bertujuan untuk memberikan kesempatan kepada mahasiswa untuk belajar dan mengembangkan diri melalui aktivitas di luar kelas perkuliahan, namun tetap diakui sebagai bagian dari perkuliahan. Program ini diperuntukan bagi mahasiswa yang ingin memperlengkapi dirinya dengan menguasai kompetensi spesifik dan praktis yang juga dicari oleh dunia usaha dunia industri. </p>
-                <a href="registrasi.php" style="color: white">
-                  <button class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    Daftar Program
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End program-mbkm Modal3-->
-
-  <!-- program-mbkm Modal4-->
-  <div class="program-mbkm-modal modal fade" id="program-mbkmModal4" tabindex="-1" aria-labelledby="program-mbkmModal4" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- program-mbkm Modal - Title-->
-                <h2 class="program-mbkm-modal-title text-secondary text-uppercase mb-0">Magang</h2>
-                <br>
-                <!-- program-mbkm Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="login/img/gambar mbkm-04.png" alt="Image MBKM" />
-                <!-- program-mbkm Modal - Text-->
-                <p class="mb-4">
-                  Magang Bersertifikat adalah bagian dari program Kampus Merdeka yang bertujuan untuk memberikan kesempatan kepada mahasiswa belajar dan mengembangkan diri melalui aktivitas di luar kelas perkuliahan. Di program Magang Bersertifikat, mahasiswa akan mendapatkan pengalaman kerja di industri/dunia profesi nyata selama 1-2 semester. Dengan pembelajaran langsung di tempat kerja mitra magang, mahasiswa akan mendapatkan hard skills maupun soft skills yang akan menyiapkan mahasiswa agar lebih mantab untuk memasuki dunia kerja dan karirnya. </p>
-                <a href="registrasi.php" style="color: white">
-                  <button class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    Daftar Program
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End program-mbkm Modal4-->
-
-  <!-- program-mbkm Modal5-->
-  <div class="program-mbkm-modal modal fade" id="program-mbkmModal5" tabindex="-1" aria-labelledby="program-mbkmModal5" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- program-mbkm Modal - Title-->
-                <h2 class="program-mbkm-modal-title text-secondary text-uppercase mb-0">Riset / Penelitian</h2>
-                <br>
-                <!-- program-mbkm Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="login/img/gambar mbkm-05.png" alt="Image MBKM" />
-                <!-- program-mbkm Modal - Text-->
-                <p class="mb-4">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid nam, aspernatur accusantium ea id temporibus magni, voluptatibus ullam eum corrupti error amet. Eos esse nam recusandae voluptate! Consectetur, inventore consequuntur?
-                </p>
-                <a href="registrasi.php" style="color: white">
-                  <button class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    Daftar Program
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End program-mbkm Modal5-->
-
-  <!-- program-mbkm Modal6-->
-  <div class="program-mbkm-modal modal fade" id="program-mbkmModal6" tabindex="-1" aria-labelledby="program-mbkmModal6" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- program-mbkm Modal - Title-->
-                <h2 class="program-mbkm-modal-title text-secondary text-uppercase mb-0">Membangun Desa / KKN</h2>
-                <br>
-                <!-- program-mbkm Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="login/img/gambar mbkm-06.png" alt="Image MBKM" />
-                <!-- program-mbkm Modal - Text-->
-                <p class="mb-4">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid nam, aspernatur accusantium ea id temporibus magni, voluptatibus ullam eum corrupti error amet. Eos esse nam recusandae voluptate! Consectetur, inventore consequuntur?
-                </p>
-                <a href="registrasi.php" style="color: white">
-                  <button class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    Daftar Program
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End program-mbkm Modal6-->
-
-  <!-- program-mbkm Modal7-->
-  <div class="program-mbkm-modal modal fade" id="program-mbkmModal7" tabindex="-1" aria-labelledby="program-mbkmModal7" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- program-mbkm Modal - Title-->
-                <h2 class="program-mbkm-modal-title text-secondary text-uppercase mb-0">Proyek Kemanusiaan</h2>
-                <br>
-                <!-- program-mbkm Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="login/img/gambar mbkm-07.png" alt="Image MBKM" />
-                <!-- program-mbkm Modal - Text-->
-                <p class="mb-4">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid nam, aspernatur accusantium ea id temporibus magni, voluptatibus ullam eum corrupti error amet. Eos esse nam recusandae voluptate! Consectetur, inventore consequuntur?
-                </p>
-                <a href="registrasi.php" style="color: white">
-                  <button class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    Daftar Program
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End program-mbkm Modal7-->
-
-  <!-- program-mbkm Modal8-->
-  <div class="program-mbkm-modal modal fade" id="program-mbkmModal8" tabindex="-1" aria-labelledby="program-mbkmModal8" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-        <div class="modal-body text-center pb-5">
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-lg-8">
-                <!-- program-mbkm Modal - Title-->
-                <h2 class="program-mbkm-modal-title text-secondary text-uppercase mb-0">Kegiatan Kewirausahaan</h2>
-                <br>
-                <!-- program-mbkm Modal - Image-->
-                <img class="img-fluid rounded mb-5" src="login/img/gambar mbkm-08.png" alt="Image MBKM" />
-                <!-- program-mbkm Modal - Text-->
-                <p class="mb-4">
-                  Wirausaha Merdeka merupakan program yang diinisiasi oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia spesial bagi para mahasiswa yang memiliki Ketertarikan terhadap dunia Wirausaha. Memberikan kesempatan bagi mahasiswa untuk dapat mengikuti Program Wirausaha Unggulan dari Perguruan Tinggi Lainnya. </p>
-                <a href="registrasi.php" style="color: white">
-                  <button class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    Daftar Program
-                  </button>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End program-mbkm Modal8-->
+      </div>';
+  }
+  ?>
 
   <!-- partial -->
 
