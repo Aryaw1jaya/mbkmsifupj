@@ -60,9 +60,6 @@
                 echo "<td><img src='../img/program/" . $user_data['images'] . "' alt='Gambar Program' width='90%' height='auto'></td>";
                 echo "<td>" . $user_data['deskripsi'] . "</td>";
                 echo "<td>
-                        <a href='edit.php?id=$user_data[id]'>
-                            <button type='button' class='btn btn-warning shadow w-75'><i class='fas fa-pen'></i></button>
-                        </a>
                         <a href='delete.php?id=$user_data[id]'>
                             <button type='button' class='btn btn-danger shadow w-75'><i class='fas fa-trash'></i></button>
                         </a>
