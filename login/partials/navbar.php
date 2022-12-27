@@ -12,11 +12,15 @@ if ($_SESSION['level'] == "lecturer") {
                         <li class="nav-item ">
                             <a class="nav-link active text-light" aria-current="page" href="../lecturer/index.php">Home</a>
                         </li>
-                        <li class="nav-item ">
-                            <a class="nav-link text-light" href="../manage-pendaftar/index.php">Manage Pendaftar</a>
-                        </li>
-                        <li class="nav-item ">
-                            <a class="nav-link text-light" href="../manage-testimoni/index.php">Manage Testimoni</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light float-end" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Manage
+                            </a>
+                            <ul class="dropdown-menu"> 
+                                <li><a class="dropdown-item" href="../manage-pendaftar/index.php">Manage Pendaftar</a></li>
+                                <li><a class="dropdown-item" href="../manage-program/index.php">Manage Program</a></li>
+                                <li><a class="dropdown-item" href="../manage-testimoni/index.php">Manage Testimoni</a></li>
+                            </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light float-end" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -79,7 +83,6 @@ if ($_SESSION['level'] == "lecturer") {
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="../manage-user/index.php">Manage User</a></li>
-                                <!-- <li><a class="dropdown-item" href="../manage-pendaftar/index.php">Manage Pendaftar</a></li> -->
                                 <li><a class="dropdown-item" href="../manage-program/index.php">Manage Program</a></li>
                                 <li><a class="dropdown-item" href="../manage-testimoni/index.php">Manage Testimoni</a></li>
                             </ul>
