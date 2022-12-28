@@ -40,7 +40,7 @@
     <div class="container-fluid mt-3">
         <!-- Dropdown Sort By -->
         <div class="dropdown mt-3 mb-4 float-end">
-            <a href="index.php" class="btn btn-warning mx-2"><i class="fas fa-print"></i>Print</a>
+            <a href="print.php" class="btn btn-warning mx-2"><i class="fas fa-print"></i>Print</a>
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Sort By
             </button>
