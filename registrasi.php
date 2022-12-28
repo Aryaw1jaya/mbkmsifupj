@@ -45,19 +45,20 @@
             <p class="card-text">
               Kamu bisa mendownload Dokumen yang diperlukan untuk pendaftaran
               MBKM, yaitu Surat Rekomendasi dari Prodi dan Surat Pernyataan
-              Tanggung Jawab (SPTJM).
+              Tanggung Jawab (SPTJM) untuk Magang & Studi Independen.
             </p>
             <hr />
             <p class="card-text">
               <small class="text-muted">Silahkan Download pada Link Berikut</small>
               <br />
               <a href="login/document/format_sr.pdf"><button class="btn btn-info shadow">
-                  Surat Rekomendasi
+                  Surat Rekomendasi MSIB
                 </button></a>
               <a href="login/document/format_sptjm.pdf"><button class="btn btn-info shadow">
-                  Surat Pernyataan Tanggung Jawab
+                  SPTJM MSIB
                 </button></a>
             </p>
+            <small class="text-muted">*untuk program MBKM lainnya silahkan hubungi dosen terkait</small>
           </div>
         </div>
       </div>
@@ -118,11 +119,11 @@
               ada pada halaman registrasi. Dan cantumkan Dokumen Surat
               Rekomendasi dan Surat Pernyataan Tanggung Jawab pada form
               pendaftaran.
+              Jika Sudah Berhasil, Silahkan Menunggu persetujuan Dosen
             </p>
             <hr />
             <p class="card-text">
-              <small class="text-muted">*Jika Sudah Berhasil, Silahkan Menunggu persetujuan
-                Dosen</small>
+              <small class="text-muted">*Tidak perlu mencantumkan Surat rekomendasi & SPTJM untuk Program MBKM diluar Magang & Studi Independen</small>
             </p>
           </div>
         </div>
