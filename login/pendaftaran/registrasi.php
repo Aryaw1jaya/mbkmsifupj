@@ -115,7 +115,7 @@
         <div class="col">
           <div class="form-outline">
             <label class="form-label" for="form6Example1">Nama Lengkap</label>
-            <input type="text" id="form6Example1" class="form-control shadow-sm" name="nama" />
+            <input type="text" id="form6Example1" class="form-control shadow-sm" name="nama" required />
           </div>
         </div>
         <div class="col">
@@ -161,7 +161,7 @@
         <div class="col">
           <div class="form-outline">
             <label class="form-label" for="form6Example2">No. HP</label>
-            <input type="number" id="form6Example2" class="form-control shadow-sm" name="no_hp" />
+            <input type="number" id="form6Example2" class="form-control shadow-sm" name="no_hp" required />
           </div>
         </div>
       </div>
@@ -169,13 +169,13 @@
       <!-- Email input -->
       <div class="form-outline mb-2">
         <label class="form-label" for="form6Example5">Email</label>
-        <input type="email" id="form6Example5" class="form-control shadow-sm" name="email" />
+        <input type="email" id="form6Example5" class="form-control shadow-sm" name="email" required />
       </div>
 
       <!-- Text input -->
       <div class="form-outline mb-3">
         <label class="form-label" for="form6Example4">Alamat</label>
-        <input type="text" id="form6Example4" class="form-control shadow-sm" name="alamat" />
+        <input type="text" id="form6Example4" class="form-control shadow-sm" name="alamat" required />
       </div>
 
       <!-- Text input -->
