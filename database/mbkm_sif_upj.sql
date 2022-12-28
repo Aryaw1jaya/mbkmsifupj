@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2022 at 05:59 PM
+-- Generation Time: Dec 28, 2022 at 08:26 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -93,13 +93,6 @@ CREATE TABLE `registrasi` (
   `sptjm` text NOT NULL,
   `status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `registrasi`
---
-
-INSERT INTO `registrasi` (`id_pendaftaran`, `nama`, `nim`, `program`, `semester`, `no_hp`, `email`, `alamat`, `surat_rekomendasi`, `sptjm`, `status`) VALUES
-(27, 'Arya Wijaya', '2020081017', 'Magang', '6', '081215327714', 'arya.wijaya@student.upj.ac.id', 'Gg. Masjid nurussalam RT 08/05 No.69', 'SR_AryaWijaya_2020081017.pdf', 'SPTJM_AryaWijaya_2020081017.pdf', 'Terverifikasi');
 
 -- --------------------------------------------------------
 
@@ -238,7 +231,7 @@ ALTER TABLE `program`
 -- AUTO_INCREMENT for table `registrasi`
 --
 ALTER TABLE `registrasi`
-  MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
+  MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
 
 --
 -- AUTO_INCREMENT for table `testimoni`
