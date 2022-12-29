@@ -126,18 +126,17 @@
         </div>
       </div>
 
-      <!-- Text input -->
+      <!-- Select Program -->
       <div class="form-outline mb-2">
         <label class="form-label" for="form6Example3">Program MBKM</label>
         <select class="form-select shadow-sm" id="inputGroupSelect01" name="program">
-          <option value="Studi Independen">Studi Independen</option>
-          <option value="Magang">Magang</option>
-          <option value="Pertukaran Mahasiswa">Pertukaran Mahasiswa</option>
-          <option value="Proyek Kemanusiaan">Proyek Kemanusiaan</option>
-          <option value="Kegiatan Wirausaha">Kegiatan Wirausaha</option>
-          <option value="Asistensi Mengajar">Asistensi Mengajar</option>
-          <option value="Penelitian/Riset">Penelitian/Riset</option>
-          <option value="Membangun Desa/KKN">Membangun Desa/KKN</option>
+          <option disabled selected> Pilih Program </option>
+          <?php
+          $program = mysqli_query($koneksi, "SELECT * FROM program");
+          while ($row = mysqli_fetch_array($program)) {
+            echo "<option value='" . $row['nama_program'] . "'>" . $row['nama_program'] . "</option>";
+          }
+          ?>
         </select>
       </div>
 

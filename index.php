@@ -34,14 +34,14 @@
   </section>
   <!-- End of Hero Section -->
 
-  <!-- Start of 8 program mbkm -->
+  <!-- Start of program mbkm -->
   <section class="page-section program-mbkm container" id="program-mbkm">
     <div class="container">
       <!-- program-mbkm Section Heading-->
       <div class="divider-custom mb-5">
         <div class="divider-custom-line"></div>
         <div class="divider-custom-icon">
-          <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">8 Program MBKM</h2>
+          <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Program MBKM</h2>
         </div>
         <div class="divider-custom-line"></div>
       </div>
