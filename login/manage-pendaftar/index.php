@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
     <link rel="stylesheet" href="../style/style.css" />
 </head>
-<title>Lecturer | Manage Pendaftar</title>
+<title>Manage Pendaftar</title>
 </head>
 
 <body>
@@ -38,6 +38,7 @@
     <!-- End Navbar -->
 
     <div class="container-fluid mt-3">
+        <h1 class="text-center fw-semibold">List Pendaftar</h1>
         <!-- Dropdown Sort By -->
         <div class="dropdown mt-3 mb-4 float-end">
             <a href="print.php" class="btn btn-warning mx-2"><i class="fas fa-print"></i>Print</a>

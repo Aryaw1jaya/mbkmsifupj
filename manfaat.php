@@ -17,7 +17,7 @@
     <div class="my-5 py-4">
         <section class="container" id="manfaat">
             <div class="container px-4 py-5" id="featured-3">
-                <h2 class="text-center">Manfaat Program MBKM</h2>
+                <h3 class="fw-bolder text-center mt-4">Manfaat Program MBKM</h3>
                 <hr>
                 <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
                     <div class="feature col">

@@ -30,7 +30,7 @@
   <!-- End of Navbar -->
 
   <!-- Start Step Registrasi -->
-  <div class="container my-4 mb-5 d-flex flex-column justify-content-center">
+  <div class="container my-5 pt-4 mb-5 d-flex flex-column justify-content-center">
     <h3 class="fw-bolder text-center mt-4">Tata Cara Daftar MBKM</h3>
     <hr class="mb-4 w-75 mx-auto" />
 
@@ -51,10 +51,10 @@
             <p class="card-text">
               <small class="text-muted">Silahkan Download pada Link Berikut</small>
               <br />
-              <a href="login/document/format_sr.pdf"><button class="btn btn-info shadow">
+              <a href="http://ringkas.kemdikbud.go.id/SrtRekomendasiMSIB4"><button class="btn btn-info shadow">
                   Surat Rekomendasi MSIB
                 </button></a>
-              <a href="login/document/format_sptjm.pdf"><button class="btn btn-info shadow">
+              <a href="http://ringkas.kemdikbud.go.id/SPJTMMSIB4"><button class="btn btn-info shadow">
                   SPTJM MSIB
                 </button></a>
             </p>

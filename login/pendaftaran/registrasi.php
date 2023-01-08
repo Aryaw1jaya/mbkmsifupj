@@ -114,13 +114,13 @@
       <div class="row mb-2">
         <div class="col">
           <div class="form-outline">
-            <label class="form-label" for="form6Example1">Nama Lengkap</label>
+            <label class="form-label" for="form6Example1">Nama Lengkap <span class="text-danger fw-bold">*</span></label>
             <input type="text" id="form6Example1" class="form-control shadow-sm" name="nama" required />
           </div>
         </div>
         <div class="col">
           <div class="form-outline">
-            <label class="form-label" for="form6Example2">NIM</label>
+            <label class="form-label" for="form6Example2">NIM <span class="text-danger fw-bold">*</span></label>
             <input type="number" readonly id="form6Example2" class="form-control shadow-sm" name="nim" value="<?php echo $_SESSION['username']; ?>" />
           </div>
         </div>
@@ -128,7 +128,7 @@
 
       <!-- Select Program -->
       <div class="form-outline mb-2">
-        <label class="form-label" for="form6Example3">Program MBKM</label>
+        <label class="form-label" for="form6Example3">Program MBKM <span class="text-danger fw-bold">*</span></label>
         <select class="form-select shadow-sm" id="inputGroupSelect01" name="program">
           <option disabled selected> Pilih Program </option>
           <?php
@@ -144,7 +144,7 @@
       <div class="row mb-2">
         <div class="col">
           <div class="form-outline">
-            <label class="form-label" for="form6Example1">Semester</label>
+            <label class="form-label" for="form6Example1">Semester <span class="text-danger fw-bold">*</span></label>
             <select class="form-select shadow-sm" id="inputGroupSelect01" name="semester">
               <option value="3">3</option>
               <option value="4">4</option>
@@ -159,7 +159,7 @@
         </div>
         <div class="col">
           <div class="form-outline">
-            <label class="form-label" for="form6Example2">No. HP</label>
+            <label class="form-label" for="form6Example2">No. HP <span class="text-danger fw-bold">*</span></label>
             <input type="number" id="form6Example2" class="form-control shadow-sm" name="no_hp" required />
           </div>
         </div>
@@ -167,13 +167,13 @@
 
       <!-- Email input -->
       <div class="form-outline mb-2">
-        <label class="form-label" for="form6Example5">Email</label>
+        <label class="form-label" for="form6Example5">Email <span class="text-danger fw-bold">*</span></label>
         <input type="email" id="form6Example5" class="form-control shadow-sm" name="email" required />
       </div>
 
       <!-- Text input -->
       <div class="form-outline mb-3">
-        <label class="form-label" for="form6Example4">Alamat</label>
+        <label class="form-label" for="form6Example4">Alamat <span class="text-danger fw-bold">*</span></label>
         <input type="text" id="form6Example4" class="form-control shadow-sm" name="alamat" required />
       </div>
 

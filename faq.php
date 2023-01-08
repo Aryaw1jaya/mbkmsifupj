@@ -14,8 +14,8 @@
 <body>
     <?php include './partials/navbar.php'; ?>
     <div class="my-5 py-5">
-        <section class="container" id="faq">
-            <h1 class="text-center">Ini FAQ</h1>
+        <section class="container my-5" id="faq">
+            <h3 class="fw-bolder text-center mt-4">Frequently Ask Questions</h3>
             <hr>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">

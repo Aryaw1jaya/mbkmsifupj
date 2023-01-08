@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
     <link rel="stylesheet" href="../style/style.css" />
 </head>
-<title>Lecturer | Manage Program</title>
+<title>Manage Program</title>
 </head>
 
 <body>
@@ -39,6 +39,7 @@
     <!-- End Navbar -->
 
     <div class="container-fluid mt-3">
+        <h1 class="text-center fw-semibold">List Program</h1>
         <a href="add.php">
             <button type="button" class="btn btn-primary shadow float-end">Add Program</button>
         </a>

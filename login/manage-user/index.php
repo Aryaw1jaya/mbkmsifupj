@@ -27,6 +27,7 @@
     <!-- End Navbar -->
 
     <div class="container-fluid mt-3">
+        <h1 class="text-center fw-semibold">List User</h1>
         <!-- Dropdown Sort By -->
         <div class="container-fluid w-100 d-inline-flex mt-3 mb-4 justify-content-end">
             <div class="button me-3">
