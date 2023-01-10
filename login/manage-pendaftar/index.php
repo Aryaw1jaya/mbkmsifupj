@@ -30,7 +30,7 @@
     include("../koneksi.php");
 
     // Fetch all users data from database
-    $result = mysqli_query($koneksi, "SELECT * FROM registrasi ORDER BY id_pendaftaran ASC");
+    $result = mysqli_query($koneksi, "SELECT * FROM registrasi ORDER BY timestamp ASC, status DESC");
     ?>
 
     <!-- Navbar -->

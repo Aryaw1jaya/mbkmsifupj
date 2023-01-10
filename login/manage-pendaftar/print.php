@@ -31,7 +31,7 @@ $pdf->SetFont('Arial', '', 10);
 include("../koneksi.php");
 
 $no = 1;
-$tampil = mysqli_query($koneksi, "select * from registrasi ORDER BY id_pendaftaran ASC");
+$tampil = mysqli_query($koneksi, "select * from registrasi WHERE status='Terverifikasi' ORDER BY timestamp ASC");
 while ($hasil = mysqli_fetch_array($tampil)) {
     $pdf->Cell(7, 6, $no++, 1, 0);
     $pdf->Cell(45, 6, $hasil['nama'], 1, 0);

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Registrasi</title>
+  <title>Tata Cara Pendaftaran</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
   <link rel="stylesheet" href="registrasi.css" />
@@ -51,10 +51,10 @@
             <p class="card-text">
               <small class="text-muted">Silahkan Download pada Link Berikut</small>
               <br />
-              <a href="http://ringkas.kemdikbud.go.id/SrtRekomendasiMSIB4"><button class="btn btn-info shadow">
+              <a href="https://universitaspembangu286-my.sharepoint.com/:w:/g/personal/ardan_mahpudin_upj_ac_id/Ebp_4i4nEklIhITg6cHHMsIBw_LT3iGB8oUNBZtv0pnrLA?e=bkTRv7"><button class="btn btn-info shadow">
                   Surat Rekomendasi MSIB
                 </button></a>
-              <a href="http://ringkas.kemdikbud.go.id/SPJTMMSIB4"><button class="btn btn-info shadow">
+              <a href="https://universitaspembangu286-my.sharepoint.com/:w:/g/personal/ardan_mahpudin_upj_ac_id/EfpG4v8PPC1MvMFZxYrTmGwBQvmMH0eOJnK1cdO3sXjXQw?e=Bcvz2r"><button class="btn btn-info shadow">
                   SPTJM MSIB
                 </button></a>
             </p>

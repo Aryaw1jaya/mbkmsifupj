@@ -68,6 +68,7 @@
     <!-- Navigation -->
     <?php include("../partials/navbar.php"); ?>
 
+    <a href="index.php" class="btn btn-warning mt-3 ms-3"><i class="fas fa-arrow-left"></i> Back</a>
 
     <!-- Start Card Registrasi -->
     <div class="container m-auto px-5 py-5 bg-body rounded-5 my-5 shadow-lg">
