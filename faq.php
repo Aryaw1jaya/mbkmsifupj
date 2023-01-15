@@ -29,51 +29,72 @@ $phone = mysqli_fetch_column($phone);
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Accordion Item #1
+                            <strong> Apa itu Kampus Merdeka ?</strong>
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style each element. These classes control the overall
-                            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-                            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
+                            Kampus Merdeka adalah kebijakan yang dikeluarkan oleh Kemendikbudristek dengan memberikan hak kepada Mahasiswa untuk mengambil mata kuliah di luar program studi selama 1 semester dan berkegiatan di luar perguruan tinggi selama 2 semester. Perguruan tinggi diberikan kebebasan untuk menyediakan kegiatan Kampus Merdeka yang sesuai dengan kebutuhan dan minat mahasiswanya.
+                            <br><br>
+                            Berikut jenis kegiatan yang tersedia di program Kampus Merdeka, yaitu: <br>
+
+                            Magang Bersertifikat <br>
+                            Studi Independen <br>
+                            Kampus Mengajar <br>
+                            Indonesian International Student Mobility Awards (IISMA) <br>
+                            Pertukaran Mahasiswa Merdeka <br>
+                            Membangun Desa (KKN Tematik) <br>
+                            Proyek Kemanusiaan <br>
+                            Riset atau Penelitian <br>
+                            Wirausaha <br>
+                            <br>
+                            Pengalaman Mahasiswa di kegiatan Kampus Merdeka akan berpengaruh besar terhadap kesiapan karir mahasiswa dengan cara memastikan Mahasiswa terus menyimak perubahan dunia luar kampus selama berkuliah dan dapat kesempatan untuk menerapkan ilmu kepada masalah di dunia nyata.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
+                            <strong>Syarat & Ketentuan Pendaftaran Mahasiswa Magang & Studi Independen Bersertifikat (MSIB) </strong>
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
-                            plugin adds the appropriate classes that we use to style each element. These classes control the overall
-                            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-                            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
+                            1. Mahasiswa aktif dan terdaftar di Pangkalan Data Pendidikan Tinggi (PDDIKTI) atau yang belum dinyatakan lulus dari program studi terakreditasi dari seluruh Perguruan Tinggi Negeri (PTN) dan Perguruan Tinggi Swasta (PTS) di bawah naungan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemdikbudristek).<br>
+                            <br>
+                            2. Mahasiswa aktif pada jenjang D2/D3/D4/S1 dengan ketentuan semester sebagai berikut pada saat program MSIB dimulai:<br>
+                            D2: minimal semester 3 <br>
+                            D3: minimal semester 4 <br>
+                            D4 dan S1: minimal semester 5 <br>
+                            <br>
+                            3. Mahasiswa berstatus aktif atau belum yudisium selama program MSIB berjalan.
+                            <br>
+                            <br>
+                            4. Data Mahasiswa terdaftar di PDDIKTI dan data sudah sesuai dengan nama di KTP Mahasiswa.
+
+
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
+                            <strong>Bagaimana Cara Pendaftaran Kampus Merdeka ?</strong>
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin
-                            adds the appropriate classes that we use to style each element. These classes control the overall
-                            appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom
-                            CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
+                            Kamu bisa mendapatkan SPTJM dan Surat Rekomendasi dari prodi untuk keperluan dokumen Kampus Merdeka <a href="./registrasi.php">Disini</a>.
+                            Jika sudah, jangan lupa untuk login ke website ini dan isi data pendaftaran Kampus Merdeka, agar dapat diproses oleh prodi.
+                            <br>
+                            <br>
+                            <strong>Silahkan Masuk ke <a href="https://kampusmerdeka.kemdikbud.go.id/">website Kampus merdeka</a>, Daftar dan login akun dengan data-data Mahasiswa.</strong>
+                            <br>
+                            Cari Program yang ingin diikuti, lalu klik tombol Daftar. Kumpulkan berkas yang diperlukan dan upload ke dalam sistem. <br>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
         <a href="https://api.whatsapp.com/send?phone=<?php echo $phone ?>">

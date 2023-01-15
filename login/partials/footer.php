@@ -49,7 +49,7 @@
                     </h6>
                     <p>
                         Sistem Informasi Univeritas Pembangunan Jaya. <br><br>
-                        The Secret of Change is to Focus All Your Energy Not On Fighting The Old but On Building The New
+                        "The Secret of Change is to Focus All Your Energy Not On Fighting The Old but On Building The New.""
                     </p>
                 </div>
                 <!-- Grid column -->
