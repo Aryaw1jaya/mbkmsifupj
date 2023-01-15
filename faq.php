@@ -8,8 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css" />
 </head>
+
+<?php
+include('./login/koneksi.php');
+
+$phone = mysqli_query($koneksi, "SELECT no_penanggungjawab FROM home where id_home = 1");
+$phone = mysqli_fetch_column($phone);
+?>
 
 <body>
     <?php include './partials/navbar.php'; ?>
@@ -68,6 +76,12 @@
                 </div>
             </div>
         </section>
+        <a href="https://api.whatsapp.com/send?phone=<?php echo $phone ?>">
+            <button class="btn btn-success rounded-pill me-3 p-2 float-end" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                <i class="fa fa-whatsapp"></i>
+                Whatsapp
+            </button>
+        </a>
     </div>
 
     <?php include './partials/footer.php'; ?>

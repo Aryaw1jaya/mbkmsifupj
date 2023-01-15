@@ -3,7 +3,7 @@
 if ($_SESSION['level'] == "lecturer") {
     echo '<nav class="navbar navbar-expand-lg bg-dark">
             <div class="container">
-                <a class="navbar-brand text-light" href="#">MBKM SIF UPJ</a>
+                <a class="navbar-brand text-light">MBKM SIF UPJ</a>
                 <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon text-light"></span>
                 </button>
@@ -28,7 +28,7 @@ if ($_SESSION['level'] == "lecturer") {
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- <li><a class="dropdown-item " href="#">Action</a></li> -->
-                                <li><a class="dropdown-item " href="#">Change Password</a></li>
+                                <!-- <li><a class="dropdown-item " href="#">Change Password</a></li> -->
                                 <li><a class="dropdown-item " href="../logout.php">Log Out</a></li>
                             </ul>
                         </li>
@@ -39,7 +39,7 @@ if ($_SESSION['level'] == "lecturer") {
 } elseif ($_SESSION['level'] == "student") {
     echo '<nav class="navbar navbar-expand-lg bg-dark">
             <div class="container">
-                <a class="navbar-brand text-light" href="#">MBKM SIF UPJ</a>
+                <a class="navbar-brand text-light">MBKM SIF UPJ</a>
                 <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon text-light"></span>
                 </button>
@@ -57,7 +57,7 @@ if ($_SESSION['level'] == "lecturer") {
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- <li><a class="dropdown-item " href="#">Action</a></li> -->
-                                <li><a class="dropdown-item " href="#">Change Password</a></li>
+                                <!-- <li><a class="dropdown-item " href="#">Change Password</a></li> -->
                                 <li><a class="dropdown-item " href="../logout.php">Log Out</a></li>
                             </ul>
                         </li>
@@ -68,7 +68,7 @@ if ($_SESSION['level'] == "lecturer") {
 } elseif ($_SESSION['level'] == "admin") {
     echo '<nav class="navbar navbar-expand-lg bg-dark">
             <div class="container">
-                <a class="navbar-brand text-light" href="#">MBKM SIF UPJ</a>
+                <a class="navbar-brand text-light">MBKM SIF UPJ</a>
                 <button class="navbar-toggler text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon text-light"></span>
                 </button>
@@ -93,7 +93,7 @@ if ($_SESSION['level'] == "lecturer") {
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- <li><a class="dropdown-item " href="#">Action</a></li> -->
-                                <li><a class="dropdown-item " href="#">Change Password</a></li>
+                                <!-- <li><a class="dropdown-item " href="#">Change Password</a></li> -->
                                 <li><a class="dropdown-item " href="../logout.php">Log Out</a></li>
                             </ul>
                         </li>

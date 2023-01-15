@@ -34,15 +34,18 @@
 	<?php include("../partials/navbar.php"); ?>
 	<!-- End Navbar -->
 
-	<div class="container mt-3">
+	<div class="container mt-3 text-end">
 		<h1>Halaman Dosen</h1>
 
 		<p>Halo <b><?php echo $user_data['nama'] ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
 	</div>
 
-	<div class="w-75 mx-auto mb-5">
+	<div class="mx-auto mb-5 border py-2 px-5" style="width: 80%;">
+		<h3>Statistik Pendaftar Program MBKM</h3>
 		<canvas id="myChart"></canvas>
 	</div>
+
+	<?php include("../partials/footer.php"); ?>
 
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
