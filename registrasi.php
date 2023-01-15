@@ -175,7 +175,7 @@
   </div>
   <!-- End Step Registrasi -->
 
-  <?php include('partials/footer.php'); ?>
+  <?php include './login/partials/footer.php'; ?>
 
   <!-- partial -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

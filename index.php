@@ -121,7 +121,7 @@
   <!-- End of Testimoni -->
 
   <!-- Start of footer -->
-  <?php include('partials/footer.php'); ?>
+  <?php include './login/partials/footer.php'; ?>
   <!-- End of footer -->
 
   <?php
