@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2022 at 08:26 AM
+-- Generation Time: Jan 17, 2023 at 09:06 AM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,34 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `all_registrasi`
--- (See below for the actual view)
---
-CREATE TABLE `all_registrasi` (
-`id_pendaftaran` int(11)
-,`nama` varchar(40)
-,`nim` varchar(20)
-,`program` varchar(30)
-,`semester` varchar(5)
-,`no_hp` varchar(15)
-,`email` varchar(40)
-,`alamat` text
-,`surat_rekomendasi` text
-,`sptjm` text
-,`status` varchar(20)
-);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `home`
 --
 
 CREATE TABLE `home` (
   `id_home` int(11) NOT NULL,
-  `title` varchar(40) NOT NULL,
-  `hero_section` text NOT NULL
+  `img` text NOT NULL,
+  `heading` varchar(50) NOT NULL,
+  `summary` text NOT NULL,
+  `sptjm` text NOT NULL,
+  `sr` text NOT NULL,
+  `nama_penanggungjawab` varchar(50) NOT NULL,
+  `no_penanggungjawab` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `home`
+--
+
+INSERT INTO `home` (`id_home`, `img`, `heading`, `summary`, `sptjm`, `sr`, `nama_penanggungjawab`, `no_penanggungjawab`) VALUES
+(1, 'home.jpg', 'Merdeka Belajar Kampus Merdeka', 'Sistem Informasi khususnya di Universitas Pembangunan Jaya telah berusaha terus bersinergi dalam mempersiapkan lulusan yang siap terjun di dalam dunia kerja, khususnya di bidang Sistem Informasi.\r\n<br/>\r\nUntuk itu Program Merdeka Belajar yang merupakan bagian dari kebijakan Merdeka Belajar oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia yang memberikan kesempaatan bagi mahasiswa/i untuk mengasah kemampuan sesuai bakat dan minat dengan terjun langsung ke dunia kerja sebagai persiapan karier masa depan.', 'https://universitaspembangu286-my.sharepoint.com/:w:/g/personal/ardan_mahpudin_upj_ac_id/EfpG4v8PPC1MvMFZxYrTmGwBQvmMH0eOJnK1cdO3sXjXQw?e=Bcvz2r', 'https://universitaspembangu286-my.sharepoint.com/:w:/g/personal/ardan_mahpudin_upj_ac_id/Ebp_4i4nEklIhITg6cHHMsIBw_LT3iGB8oUNBZtv0pnrLA?e=bkTRv7', 'Agus Setiawan', '6287887883177');
 
 -- --------------------------------------------------------
 
@@ -71,8 +63,8 @@ CREATE TABLE `program` (
 --
 
 INSERT INTO `program` (`id`, `nama_program`, `images`, `deskripsi`) VALUES
-(3, 'Magang', 'gambar mbkm-04.png', 'Magang Bersertifikat adalah bagian dari program Kampus Merdeka yang bertujuan untuk memberikan kesempatan kepada mahasiswa belajar dan mengembangkan diri melalui aktivitas di luar kelas perkuliahan. Di program Magang Bersertifikat, mahasiswa akan mendapatkan pengalaman kerja di industri/dunia profesi nyata selama 1-2 semester. Dengan pembelajaran langsung di tempat kerja mitra magang, mahasiswa akan mendapatkan hard skills maupun soft skills yang akan menyiapkan mahasiswa agar lebih mantab untuk memasuki dunia kerja dan karirnya.'),
-(4, 'Studi Independen', 'gambar mbkm-03.png', 'Studi Independen Bersertifikat adalah bagian dari program Kampus Merdeka yang bertujuan untuk memberikan kesempatan kepada mahasiswa untuk belajar dan mengembangkan diri melalui aktivitas di luar kelas perkuliahan, namun tetap diakui sebagai bagian dari perkuliahan. Program ini diperuntukan bagi mahasiswa yang ingin memperlengkapi dirinya dengan menguasai kompetensi spesifik dan praktis yang juga dicari oleh dunia usaha dunia industri.');
+(6, 'Magang', 'gambar mbkm-04.png', 'Magang Bersertifikat adalah bagian dari program Kampus Merdeka yang bertujuan untuk memberikan kesempatan kepada mahasiswa belajar dan mengembangkan diri melalui aktivitas di luar kelas perkuliahan. Di program Magang Bersertifikat, mahasiswa akan mendapatkan pengalaman kerja di industri/dunia profesi nyata selama 1-2 semester. Dengan pembelajaran langsung di tempat kerja mitra magang, mahasiswa akan mendapatkan hard skills maupun soft skills yang akan menyiapkan mahasiswa agar lebih mantab untuk memasuki dunia kerja dan karirnya.'),
+(7, 'Studi Independen', 'gambar mbkm-03.png', 'Magang Bersertifikat adalah bagian dari program Kampus Merdeka yang bertujuan untuk memberikan kesempatan kepada mahasiswa belajar dan mengembangkan diri melalui aktivitas di luar kelas perkuliahan. Di program Magang Bersertifikat, mahasiswa akan mendapatkan pengalaman kerja di industri/dunia profesi nyata selama 1-2 semester. Dengan pembelajaran langsung di tempat kerja mitra magang, mahasiswa akan mendapatkan hard skills maupun soft skills yang akan menyiapkan mahasiswa agar lebih mantab untuk memasuki dunia kerja dan karirnya.');
 
 -- --------------------------------------------------------
 
@@ -91,7 +83,8 @@ CREATE TABLE `registrasi` (
   `alamat` text NOT NULL,
   `surat_rekomendasi` text NOT NULL,
   `sptjm` text NOT NULL,
-  `status` varchar(20) NOT NULL
+  `status` varchar(20) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -113,8 +106,7 @@ CREATE TABLE `testimoni` (
 --
 
 INSERT INTO `testimoni` (`id`, `nama`, `foto`, `prodi_angkatan`, `testimoni`) VALUES
-(7, 'Arya', 'arya.JPG', 'Sif_2020', 'Pada semester 3 saya mengikuti program MBKM yaitu Studi x Agate Academy, yang mempelajari tentang pengembangan Games dan Industrinya. Saya mendapatkan ilmu tentang menjadi Project Manager dan Games Programmer, serta situasi aslinya seperti di Industri.'),
-(8, 'Richard', 'richard.jpg', 'Sif_2020', 'Saya ikut program MBKM pertukaran pelajar di USNI, senang bisa mendapatkan pengalaman baru bisa belajar di luar kampus, selain itu juga benefit nya bisa konversi SKS dan JSDP.');
+(35, 'Arya Wijaya', 'arya.JPG', 'SIF 2020', 'Saya Mengikuti Program Studi independen pada tahun 2021 dengan mitra AGATE Academy. Dengan mendalami Studi tentang Game Programmer dan Product Manager. Serta mendapat teman-teman baru dari berbagai daerah di Indonesia.');
 
 -- --------------------------------------------------------
 
@@ -134,48 +126,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`username`, `password`, `nama`, `level`) VALUES
-('2020081017', 'upj.2020081017', 'Arya Wijaya', 'student'),
-('admin', 'admin', 'admin', 'admin'),
-('lecturer', 'lecturer', 'lecturer', 'lecturer'),
-('student', 'student', 'student', 'student');
-
--- --------------------------------------------------------
-
---
--- Stand-in structure for view `verif_registrasi`
--- (See below for the actual view)
---
-CREATE TABLE `verif_registrasi` (
-`id_pendaftaran` int(11)
-,`nama` varchar(40)
-,`nim` varchar(20)
-,`program` varchar(30)
-,`semester` varchar(5)
-,`no_hp` varchar(15)
-,`email` varchar(40)
-,`alamat` text
-,`surat_rekomendasi` text
-,`sptjm` text
-,`status` varchar(20)
-);
-
--- --------------------------------------------------------
-
---
--- Structure for view `all_registrasi`
---
-DROP TABLE IF EXISTS `all_registrasi`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `all_registrasi`  AS SELECT `registrasi`.`id_pendaftaran` AS `id_pendaftaran`, `registrasi`.`nama` AS `nama`, `registrasi`.`nim` AS `nim`, `registrasi`.`program` AS `program`, `registrasi`.`semester` AS `semester`, `registrasi`.`no_hp` AS `no_hp`, `registrasi`.`email` AS `email`, `registrasi`.`alamat` AS `alamat`, `registrasi`.`surat_rekomendasi` AS `surat_rekomendasi`, `registrasi`.`sptjm` AS `sptjm`, `registrasi`.`status` AS `status` FROM `registrasi``registrasi`  ;
-
--- --------------------------------------------------------
-
---
--- Structure for view `verif_registrasi`
---
-DROP TABLE IF EXISTS `verif_registrasi`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `verif_registrasi`  AS SELECT `registrasi`.`id_pendaftaran` AS `id_pendaftaran`, `registrasi`.`nama` AS `nama`, `registrasi`.`nim` AS `nim`, `registrasi`.`program` AS `program`, `registrasi`.`semester` AS `semester`, `registrasi`.`no_hp` AS `no_hp`, `registrasi`.`email` AS `email`, `registrasi`.`alamat` AS `alamat`, `registrasi`.`surat_rekomendasi` AS `surat_rekomendasi`, `registrasi`.`sptjm` AS `sptjm`, `registrasi`.`status` AS `status` FROM `registrasi` WHERE `registrasi`.`status` = 'terverifikasi''terverifikasi'  ;
+('2020081017', 'Upj.2020081017', 'Arya Wijaya', 'student'),
+('20230000', '1234', 'Dosen Dimas', 'lecturer'),
+('20232023', 'admin', 'Admin', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -219,25 +172,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `home`
 --
 ALTER TABLE `home`
-  MODIFY `id_home` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_home` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `program`
 --
 ALTER TABLE `program`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `registrasi`
 --
 ALTER TABLE `registrasi`
-  MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+  MODIFY `id_pendaftaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=134;
 
 --
 -- AUTO_INCREMENT for table `testimoni`
 --
 ALTER TABLE `testimoni`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
