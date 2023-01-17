@@ -37,7 +37,7 @@
                     </button>
                 </a>
             </div>
-            <div class="dropdown">
+            <!-- <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Sort By
                 </button>
@@ -46,7 +46,7 @@
                     <li><a class="dropdown-item" href="#">Nama</a></li>
                     <li><a class="dropdown-item" href="#">Level</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
 
 

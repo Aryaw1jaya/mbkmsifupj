@@ -61,7 +61,7 @@
         // Insert user data into table
         $result = mysqli_query($koneksi, "INSERT INTO program(nama_program, images, deskripsi) VALUES('$nama_program','$file_images->name', '$deskripsi')");
         // Show message when user added
-        echo "<script>alert('Pendaftaran Anda Berhasil');</script>";
+        echo "<script>alert('Submit Program Berhasil');</script>";
     }
     ?>
 

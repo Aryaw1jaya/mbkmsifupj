@@ -18,6 +18,8 @@
     while ($user_data = mysqli_fetch_array($result)) {
         $heading = $user_data['heading'];
         $summary = $user_data['summary'];
+        $sptjm = $user_data['sptjm'];
+        $sr = $user_data['sr'];
         $nama_pj = $user_data['nama_penanggungjawab'];
         $no_pj = $user_data['no_penanggungjawab'];
     }
@@ -64,6 +66,18 @@
 
                 <!-- Prodi input -->
                 <div class="form-outline mb-2">
+                    <label class="form-label" for="form6Example4">Link SPTJM</label>
+                    <input class="form-control" type="text" name="sptjm" value="<?php echo $sptjm ?>">
+                </div>
+
+                <!-- Prodi input -->
+                <div class="form-outline mb-2">
+                    <label class="form-label" for="form6Example4">Link Surat Rekomendasi Prodi</label>
+                    <input class="form-control" type="text" name="sr" value="<?php echo $sr ?>">
+                </div>
+
+                <!-- Prodi input -->
+                <div class="form-outline mb-2">
                     <label class="form-label" for="form6Example4">Nama Penanggung Jawab</label>
                     <input class="form-control" type="text" name="nama_penanggungjawab" value="<?php echo $nama_pj ?>">
                 </div>
@@ -87,14 +101,18 @@
     if (isset($_POST['update'])) {
         $heading = $_POST['heading'];
         $summary = $_POST['summary'];
+        $sptjm = $_POST['sptjm'];
+        $sr = $_POST['sr'];
         $nama_pj = $_POST['nama_penanggungjawab'];
         $no_pj = $_POST['no_penanggungjawab'];
 
         // update user data
-        $result2 = mysqli_query($koneksi, "UPDATE home SET heading='$heading', summary='$summary', nama_penanggungjawab='$nama_pj', no_penanggungjawab='$no_pj' WHERE id_home=1");
+        $result2 = mysqli_query($koneksi, "UPDATE home SET heading='$heading', summary='$summary', sptjm='$sptjm', sr='$sr', nama_penanggungjawab='$nama_pj', no_penanggungjawab='$no_pj' WHERE id_home=1");
 
-        // Redirect to homepage to display updated user in list
-        header("Location: index.php");
+        echo ('<script>
+        alert("Data Berhasil Diubah");
+        window.location.href = "index.php";
+        </script>');
     }
     ?>
 </body>

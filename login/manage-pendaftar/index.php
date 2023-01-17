@@ -42,7 +42,7 @@
         <!-- Dropdown Sort By -->
         <div class="dropdown mt-3 mb-4 float-end">
             <a href="print.php" class="btn btn-warning mx-2"><i class="fas fa-print"></i>Print</a>
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <!-- <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Sort By
             </button>
             <ul class="dropdown-menu">
@@ -50,7 +50,7 @@
                 <li><a class="dropdown-item" href="#">Nim</a></li>
                 <li><a class="dropdown-item" href="#">Angkatan</a></li>
                 <li><a class="dropdown-item" href="#">Status</a></li>
-            </ul>
+            </ul> -->
         </div>
 
         <!-- Table Pendaftar -->

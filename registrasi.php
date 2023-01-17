@@ -25,6 +25,15 @@
 </head>
 
 <body class="pt-5">
+  <?php
+  include('./login/koneksi.php');
+
+  $sptjm = mysqli_query($koneksi, "SELECT sptjm FROM home where id_home = 1");
+  $sr = mysqli_query($koneksi, "SELECT sr FROM home where id_home = 1");
+  $sptjm = mysqli_fetch_column($sptjm);
+  $sr = mysqli_fetch_column($sr);
+  ?>
+
   <!-- Start of Navbar -->
   <?php include('partials/navbar.php'); ?>
   <!-- End of Navbar -->
@@ -51,10 +60,10 @@
             <p class="card-text">
               <small class="text-muted">Silahkan Download pada Link Berikut</small>
               <br />
-              <a href="https://universitaspembangu286-my.sharepoint.com/:w:/g/personal/ardan_mahpudin_upj_ac_id/Ebp_4i4nEklIhITg6cHHMsIBw_LT3iGB8oUNBZtv0pnrLA?e=bkTRv7"><button class="btn btn-info shadow">
+              <a href="<?php echo $sr ?>"><button class="btn btn-info shadow">
                   Surat Rekomendasi MSIB
                 </button></a>
-              <a href="https://universitaspembangu286-my.sharepoint.com/:w:/g/personal/ardan_mahpudin_upj_ac_id/EfpG4v8PPC1MvMFZxYrTmGwBQvmMH0eOJnK1cdO3sXjXQw?e=Bcvz2r"><button class="btn btn-info shadow">
+              <a href="<?php echo $sptjm ?>"><button class="btn btn-info shadow">
                   SPTJM MSIB
                 </button></a>
             </p>

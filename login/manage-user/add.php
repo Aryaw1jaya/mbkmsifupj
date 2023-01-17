@@ -89,7 +89,10 @@
         $result = mysqli_query($koneksi, "INSERT INTO user(username,password,nama,level) VALUES('$username','$password','$nama','$level')");
 
         // Show message when user added
-        echo "User added successfully. <a href='index.php'>View Users</a>";
+        echo ('<script>
+        alert("Data Berhasil Ditambah");
+        window.location.href = "index.php";
+        </script>');
     }
     ?>
 

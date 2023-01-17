@@ -10,7 +10,7 @@ if (isset($_POST['update'])) {
     $level = $_POST['level'];
 
     // update user data
-    $result = mysqli_query($koneksi, "UPDATE user SET password=' $password', nama='$nama', level='$level' WHERE username=$username");
+    $result = mysqli_query($koneksi, "UPDATE user SET password='$password', nama='$nama', level='$level' WHERE username=$username");
 
     // Redirect to homepage to display updated user in list
     header("Location: index.php");

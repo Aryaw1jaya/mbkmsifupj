@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Admin | Home</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
 		<p>Halo <b><?php echo $user_data['nama'] ?></b> Anda telah login sebagai <b><?php echo $_SESSION['level']; ?></b>.</p>
 	</div>
 
-	<div class="container mt-3 mb-5">
+	<div class="card mx-auto p-3 shadow mt-3 mb-5" style="width: 85%;">
 		<h3>Manage Home Page</h3>
 		<table class="table border">
 			<tr>
@@ -54,12 +54,24 @@
 			<tr>
 				<th>Header</th>
 				<td> : </td>
-				<td> <?php echo $home['heading'] ?></td>
+				<td> <strong>
+						<h4> <?php echo $home['heading'] ?></h4>
+					</strong></td>
 			</tr>
 			<tr>
 				<th>Summary</th>
 				<td> : </td>
 				<td> <?php echo $home['summary'] ?></td>
+			</tr>
+			<tr>
+				<th>Link SPTJM</th>
+				<td> : </td>
+				<td> <a href="<?php echo $home['sptjm'] ?>"> <?php echo $home['sptjm'] ?></a></td>
+			</tr>
+			<tr>
+				<th>Link Surat Rekomendasi</th>
+				<td> : </td>
+				<td> <a href="<?php echo $home['sr'] ?>"> <?php echo $home['sr'] ?></a></td>
 			</tr>
 			<tr>
 				<th>Nama Penanggung Jawab</th>
@@ -69,13 +81,13 @@
 			<tr>
 				<th>Nomor Penanggung Jawab</th>
 				<td> : </td>
-				<td> <a class="btn btn-success" href="https://api.whatsapp.com/send?phone=<?php echo $home['no_penanggungjawab'] ?>"><?php echo $home['no_penanggungjawab'] ?> </a></td>
+				<td> <a class="btn btn-success shadow rounded-pill" href="https://api.whatsapp.com/send?phone=<?php echo $home['no_penanggungjawab'] ?>"><i class="fa fa-whatsapp"></i> <?php echo $home['no_penanggungjawab'] ?> </a></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td></td>
 				<td class="float-end">
-					<a class="btn btn-warning mb-3 px-4" href="edit.php?id=<?php echo $home['id_home'] ?>">Edit</a </td>
+					<a class="btn btn-warning shadow mb-3 px-4" href="edit.php?id=<?php echo $home['id_home'] ?>">Edit</a </td>
 			</tr>
 		</table>
 	</div>

@@ -62,7 +62,7 @@
         $result = mysqli_query($koneksi, "INSERT INTO testimoni(nama, foto, prodi_angkatan, testimoni) VALUES('$nama','$file_foto->name','$prodi_angkatan', '$testimoni')");
 
         // Show message when user added
-        echo "<script>alert('Pendaftaran Anda Berhasil');</script>";
+        echo "<script>alert('Submit Testimoni Berhasil');</script>";
     }
     ?>
 
